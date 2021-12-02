@@ -12,13 +12,13 @@ So I installed [pyserial](https://pyserial.readthedocs.io/en/latest/index.html#)
 I remembered about a library called [ReadWriteMemory](https://pypi.org/project/ReadWriteMemory/) that basically reads and writes the memory of any process - a bit like Cheat Engine.
 Thanks to [RandomDavis](https://www.youtube.com/watch?v=Pv0wx4uHRfM) I found out how to do that. From there to now, we got the program I've released today. 
 # How To Use DS3C
-This is a pretty simple program to use. When the counter has loaded in, press 'y' \
-on your keyboard to bring up the options menu. In there you'll be able to edit the number of deaths, font, font and \
-background colour, and savedata location; aswell as reset the settings back to default and, most importantly, connect your \
+This is a pretty simple program to use. When the counter has loaded in, press 'y' 
+on your keyboard to bring up the options menu. In there you'll be able to edit the number of deaths, font, font and 
+background colour, and savedata location; aswell as reset the settings back to default and, most importantly, connect your 
 game to Dark Douls 3!
 # WARNING
-I don't THINK this program can ban a player BUT I could be wrong. It doesn't attach itself \
-to the game - or attach any kind of debugger to it either. It simply reads the current health value of the player in a similar way that \
+I don't THINK this program can ban a player BUT I could be wrong. It doesn't attach itself 
+to the game - or attach any kind of debugger to it either. It simply reads the current health value of the player in a similar way that 
 Cheat Engine does. Always exercise caution when it comes to things like this. To stay extra safe you could:
 - Turn your steam to offline mode
 - Turn your Dark Souls into offline mode
