@@ -1,3 +1,8 @@
+
+## Screenshots
+
+![App Screenshot](https://cdn.discordapp.com/attachments/467018961259855872/916074446333288448/unknown.png)
+
 # DS3C
 Hello! This is my first proper program. I kind of made this because I was bored. You know how it is, right? Sitting down in your chair, opening and closing games you dont even feel like playing; only doing so to speed up the passage of time until either the end of the day has been reached, or someone texts you for whatever reason.
 Any reason will do - its not like you're busy. 
@@ -18,3 +23,17 @@ Cheat Engine does. Always exercise caution when it comes to things like this. To
 - Turn your steam to offline mode
 - Turn your Dark Souls into offline mode
 - Make a second steam account and family share Dark Souls 3 to it
+## Deployment
+
+To run this project just run 'DarkSoulsDeathCount.exe' on the [release page](https://github.com/TohruTheMaid/DS3C/releases/tag/Releases)
+
+
+## Acknowledgements
+
+ - [Random Davis](https://www.youtube.com/channel/UCEtOy2t4jLY7oNGHfdlMHvA)
+
+
+## Authors
+
+- [@TohruTheMaid](https://github.com/TohruTheMaid)
+
