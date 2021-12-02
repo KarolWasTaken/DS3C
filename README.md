@@ -1,2 +1,20 @@
 # DS3C
-A simple automatic Dark Souls III death counter
+Hello! This is my first proper program. I kind of made this because I was bored. You know how it is, right? Sitting down in your chair, opening and closing games you dont even feel like playing; only doing so to speed up the passage of time until either the end of the day has been reached, or someone texts you for whatever reason.
+Any reason will do - its not like you're busy. 
+Well, I got bored of idly sitting around and waiting for life to pass me by (striking I know) so I began a project. 
+I wrote some simple code on my arduino to make button that counts how many times I press it then I thought, "Maybe I can read the output with python."
+So I installed [pyserial](https://pyserial.readthedocs.io/en/latest/index.html#) and got to work. The idea was I press the button every death but eventually I wondered if I can make this program increment automatically. 
+I remembered about a library called [ReadWriteMemory](https://pypi.org/project/ReadWriteMemory/) that basically reads and writes the memory of any process - a bit like Cheat Engine.
+Thanks to [RandomDavis](https://www.youtube.com/watch?v=Pv0wx4uHRfM) I found out how to do that. From there to now, we got the program I've released today. 
+# How To Use DS3C
+This is a pretty simple program to use. When the counter has loaded in, press 'y' \
+on your keyboard to bring up the options menu. In there you'll be able to edit the number of deaths, font, font and \
+background colour, and savedata location; aswell as reset the settings back to default and, most importantly, connect your \
+game to Dark Douls 3!
+# WARNING
+I don't THINK this program can ban a player BUT I could be wrong. It doesn't attach itself \
+to the game - or attach any kind of debugger to it either. It simply reads the current health value of the player in a similar way that \
+Cheat Engine does. Always exercise caution when it comes to things like this. To stay extra safe you could:
+- Turn your steam to offline mode
+- Turn your Dark Souls into offline mode
+- Make a second steam account and family share Dark Souls 3 to it
