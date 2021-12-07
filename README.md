@@ -35,7 +35,7 @@ To run this project just run 'DarkSoulsDeathCount.exe' on the [release page](htt
 ## Dependencies
 To run the code files, install the following dependencies
 
-- [tkinter](https://tkdocs.com/tutorial/install.html)(preinstalled with python)
+- [tkinter](https://tkdocs.com/tutorial/install.html) (preinstalled with python)
 - [pywin32](https://pypi.org/project/pywin32/)
 - [psutil](https://pypi.org/project/psutil/)
 
