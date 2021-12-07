@@ -90,6 +90,12 @@ def incrementDeaths():
             variables.actualData += 1                                         
             sleep(20)           # sleep to make sure it doesnt increment more than once
 
+def gameReconnect():
+    while True:    # function to reconnect program after it disconnects (every 10 seconds)
+        while(not variables.connectedToGame and variables.lookForGame): 
+            variables.process.open(name = 'DarkSoulsIII')
+            sleep(10)         
+        sleep(0.01)      # stop throttling please
 
 def signalHandler(signum, frame):
     sys.exit                                 # make sure threads are all closed
@@ -98,6 +104,10 @@ signal.signal(signal.SIGINT, signalHandler)
 t1 = threading.Thread(target=HP)
 t1.daemon = True                  # created it in a new thread because I said so.
 t1.start()
+
+t2 = threading.Thread(target=gameReconnect)
+t2.daemon = True          # shutup I'll create a new thread if I want
+t2.start()
 
 class App():
 
