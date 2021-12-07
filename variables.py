@@ -1,3 +1,4 @@
+from win32con import NULL
 from process_interface import ProcessInterface
 from infobox import InfoBoxClass
 from JSONMethods import JSON
@@ -28,7 +29,8 @@ actualData = 0
 colourCodeFont = "white"
 colourCodeBack = "green"
 txtFont = "Comic Sans MS"
-
+connectedToGame = True                  # for when program loses connection to the game after connecting to it
+lookForGame = NULL
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
