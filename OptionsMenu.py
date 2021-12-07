@@ -125,6 +125,7 @@ class Options(object):
                         DS3Canv.pack()
                         labelDS3 = tk.Label(root, text= "Successfully connected to your game window!\n You can close this window now.")
                         DS3Canv.create_window(170, 50, window=labelDS3)
+                        variables.connectedToGame = False
                         root.mainloop()
                     else:
                         raise ValueError('A very specific bad thing happened.')
