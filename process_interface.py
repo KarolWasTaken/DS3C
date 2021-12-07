@@ -1,5 +1,5 @@
 from tkinter import Frame
-import psutil
+import psutil, variables
 from ctypes import *
 from ctypes.wintypes import BOOL
 import win32con  # from pywin32
@@ -55,9 +55,11 @@ class ProcessInterface(object):
         bytes_read = c_ulong(0)
         if windll.kernel32.ReadProcessMemory(self.h_process, address, buf, buffer_size, byref(bytes_read)):
             canReadAddress = True
+            variables.lookForGame = False  # check gameReconnect() in DarkSoulsDeathCount.py
             return buf
         else:
             canReadAddress = False
+            variables.lookForGame = True
             print("Failed: Read Memory - Error Code: ", windll.kernel32.GetLastError()) 
             windll.kernel32.CloseHandle(self.h_process)
             windll.kernel32.SetLastError(10000)
