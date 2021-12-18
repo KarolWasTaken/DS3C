@@ -24,7 +24,7 @@ Cheat Engine does. Always exercise caution when it comes to things like this. To
 - Make a second steam account and family share Dark Souls 3 to it
 ## Deployment
 
-To run this project just run 'DarkSoulsDeathCount.exe' on the [release page](https://github.com/TohruTheMaid/DS3C/releases/tag/Releases)
+To run this project just run 'DarkSoulsDeathCount.exe' on the [release page](https://github.com/TohruTheMaid/DS3C/releases)
 
 
 ## Acknowledgements
