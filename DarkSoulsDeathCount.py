@@ -1,6 +1,7 @@
 import tkinter as tk
-import json, threading, signal, sys, variables, os
+import json, threading, signal, sys, variables, os, time
 from tkinter import *
+from pypresence import Presence
 
 from ctypes import *                             # stuff needed to get the hp
 from time import sleep
@@ -67,6 +68,14 @@ else:
     variables.colourCodeBack = readData['background colour']
     variables.txtFont = readData['font']
 
+client_id = '921746813529256009'  # client id
+RPC = Presence(client_id,pipe=0)  # Initialize the client class
+RPC.connect() # Start the handshake loop
+start_time=time.time()
+
+def incrementDeaths():
+            variables.actualData += 1                                         
+            sleep(20)           # sleep to make sure it doesnt increment more than once
 
 def HP():
     while True:
@@ -74,7 +83,7 @@ def HP():
             # this code and the process_interface class belong to a man called 'Random Davis' on YT (~650 subs) and randomdavis on github. Super thanks sir for making this - ily :).
             base_address = 0x140000000                   # getting hp from ds3 (multi level pointers)
             step8_pointer_address = 0x004768E78
-            step8_static_address = c_uint64(base_address + step8_pointer_address) # base_address + step8_pointer_address
+            step8_static_address = c_uint64(base_address + step8_pointer_address)
             step8_base_pointer_val = c_uint64.from_buffer(variables.process.read_memory(step8_static_address, buffer_size =8)).value                
             step8_pointer_val_1 = c_uint64.from_buffer(variables.process.read_memory(c_uint64(step8_base_pointer_val + 0x80), buffer_size=8)).value
             step8_pointer_val_2 = c_uint64.from_buffer(variables.process.read_memory(c_uint64(step8_pointer_val_1 + 0x1f90), buffer_size=8)).value
@@ -86,16 +95,17 @@ def HP():
         except:             
             sleep(1)                      # so the program doesnt throttle
 
-def incrementDeaths():
-            variables.actualData += 1                                         
-            sleep(20)           # sleep to make sure it doesnt increment more than once
-
 def gameReconnect():
     while True:    # function to reconnect program after it disconnects (every 10 seconds)
         while(not variables.connectedToGame and variables.lookForGame): 
             variables.process.open(name = 'DarkSoulsIII')
             sleep(10)         
         sleep(0.01)      # stop throttling please
+
+def updatePresence():
+    while True:  # The presence will stay on as long as the program is running
+        RPC.update(large_image="large-image", large_text="DARK SOULS III", start = start_time, details="Deaths #" + str(variables.actualData))
+        time.sleep(1) # Can only update rich presence every second
 
 def signalHandler(signum, frame):
     sys.exit                                 # make sure threads are all closed
@@ -108,6 +118,10 @@ t1.start()
 t2 = threading.Thread(target=gameReconnect)
 t2.daemon = True          # shutup I'll create a new thread if I want
 t2.start()
+
+t3 = threading.Thread(target=updatePresence)
+t3.daemon = True          # another thread, another day. I do what I want.
+t3.start()
 
 class App():
 
