@@ -168,6 +168,8 @@ class Options(object):
             canvas1.create_window(150, 280, window=myButtonConnectDS3)
 
             root.protocol("WM_DELETE_WINDOW", on_closing)     # close window confirm stuff
+
+            root.resizable(False, False) # stop window from being resized
             root.mainloop()
         except:
             pass
