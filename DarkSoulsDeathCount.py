@@ -129,7 +129,7 @@ class App():
     def __init__(self):
 
         self.root = tk.Tk()
-        self.root.title("ds3 death count")                                # setup
+        self.root.title("DS3C Death Count")                                # setup
         self.root.geometry("750x200")       
         self.root.iconbitmap(variables.resource_path("iconds3.ico"))
 
