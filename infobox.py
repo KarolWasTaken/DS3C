@@ -32,4 +32,5 @@ steam account and family share Dark Souls 3 to it ", font=("Century Gothic", 10)
         infoCanvas.create_window(250, 470, window=labelText3)
         infoCanvas.create_rectangle(450, 102.5, 60, 98.5, fill='black')  #x1 y1 x2 y2
         infoCanvas.create_rectangle(450, 242.5, 60, 238.5, fill='black')
+        infoRoot.resizable(False, False) # stop window from being resized
         infoRoot.mainloop()   
