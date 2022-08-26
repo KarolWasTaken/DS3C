@@ -1,4 +1,9 @@
 [![pypresence](https://img.shields.io/badge/using-pypresence-00bb88.svg?style=for-the-badge&logo=discord&logoWidth=20)](https://github.com/qwertyquerty/pypresence)
+
+
+Due to the newest Dark Souls III update, this program no longer works. It can only be used by manually inputting the death data in. If I can, I will implement a fix.
+
+
 ## Screenshots
 
 ![App Screenshot](https://cdn.discordapp.com/attachments/467018961259855872/916074446333288448/unknown.png)
