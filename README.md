@@ -2,6 +2,7 @@
 
 
 ## Due to the newest Dark Souls III update, this program no longer works. It can only be used by manually inputting the death data in. If I can, I will implement a fix.
+## fix implemented in the form of a ![new project](https://github.com/KarolWasTaken/sldc)
 
 
 ## Screenshots
